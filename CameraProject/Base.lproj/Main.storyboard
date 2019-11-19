@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,23 +15,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l3E-fG-i2p">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l3E-fG-i2p">
                                 <rect key="frame" x="20" y="44" width="374" height="533"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-je-qEZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDY-je-qEZ">
                                 <rect key="frame" x="20" y="611" width="144" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="VPo-bT-Hnd"/>
+                                    <constraint firstAttribute="height" constant="114" id="r4K-80-JcJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="カメラ"/>
                                 <connections>
                                     <action selector="runCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VmN-hQ-VXx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnZ-bh-Fjq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnZ-bh-Fjq">
                                 <rect key="frame" x="250" y="611" width="144" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="アルバム"/>
@@ -39,10 +40,12 @@
                                     <action selector="runAlbum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TiV-6Q-jfr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsF-Ae-ogB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsF-Ae-ogB">
                                 <rect key="frame" x="135" y="733" width="144" height="114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="ICc-KG-hXL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <state key="normal" title="保存"/>
                                 <connections>
@@ -51,6 +54,21 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="gDY-je-qEZ" firstAttribute="bottom" secondItem="TnZ-bh-Fjq" secondAttribute="bottom" id="9Mk-5N-3Ma"/>
+                            <constraint firstItem="l3E-fG-i2p" firstAttribute="leading" secondItem="gDY-je-qEZ" secondAttribute="leading" id="FGm-wM-uyQ"/>
+                            <constraint firstItem="gDY-je-qEZ" firstAttribute="top" secondItem="TnZ-bh-Fjq" secondAttribute="top" id="GAb-fd-eKD"/>
+                            <constraint firstItem="TnZ-bh-Fjq" firstAttribute="leading" secondItem="gDY-je-qEZ" secondAttribute="trailing" constant="86" id="KbX-r3-Zus"/>
+                            <constraint firstItem="l3E-fG-i2p" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Kpu-5s-NgC"/>
+                            <constraint firstItem="MsF-Ae-ogB" firstAttribute="top" secondItem="gDY-je-qEZ" secondAttribute="bottom" constant="8" id="MIy-fk-03n"/>
+                            <constraint firstItem="MsF-Ae-ogB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="PMG-cz-PTu"/>
+                            <constraint firstItem="l3E-fG-i2p" firstAttribute="centerX" secondItem="MsF-Ae-ogB" secondAttribute="centerX" id="WsD-jd-eHB"/>
+                            <constraint firstItem="l3E-fG-i2p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eNk-R0-5c1"/>
+                            <constraint firstItem="gDY-je-qEZ" firstAttribute="top" secondItem="l3E-fG-i2p" secondAttribute="bottom" constant="34" id="ewf-jV-Vs8"/>
+                            <constraint firstItem="l3E-fG-i2p" firstAttribute="trailing" secondItem="TnZ-bh-Fjq" secondAttribute="trailing" id="hPV-UV-CJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MsF-Ae-ogB" secondAttribute="bottom" constant="15" id="sn9-0C-4yy"/>
+                            <constraint firstItem="l3E-fG-i2p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wz5-8Y-ivj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
